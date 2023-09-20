@@ -1,4 +1,5 @@
 const express = require('express');
+import * as bcrypt from 'bcryptjs';
 
 export const register = async (req, res, next) => {
   const { email, password } = req.body;
