@@ -2,6 +2,8 @@ const express = require('express');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const path = require('path');
+const jobRouter = require('./routers/jobRouter');
+
 
 const app = express();
 const config = require('../webpack.config.js');
@@ -21,5 +23,5 @@ app.listen(PORT, function () {
   console.log(`Example app listening on port ${PORT}!\n`);
 });
 
-
+app.use('/job', jobRouter);
 
