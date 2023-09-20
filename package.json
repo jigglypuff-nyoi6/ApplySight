@@ -30,6 +30,7 @@
     "yamljs": "^0.3.0"
   },
   "dependencies": {
+    "@babel/preset-react": "^7.22.15",
     "babel": "^6.23.0",
     "lodash": "^4.17.21",
     "n": "^9.1.0",

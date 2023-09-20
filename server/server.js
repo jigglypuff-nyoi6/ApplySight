@@ -15,9 +15,10 @@ app.use(
   })
 );
 
+const PORT = 3000;
 // Serve the files on port 3000.
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!\n');
+app.listen(PORT, function () {
+  console.log(`Example app listening on port ${PORT}!\n`);
 });
 
 
