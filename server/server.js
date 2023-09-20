@@ -3,6 +3,8 @@ const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const path = require('path');
 const authRouter = require('./routers/authRouter');
+const jobRouter = require('./routers/jobRouter');
+
 
 const app = express();
 const config = require('../webpack.config.js');
@@ -25,3 +27,5 @@ app.listen(PORT, function () {
 
 app.use('/register', authRouter);
 app.use('/login', authRouter);
+app.use('/job', jobRouter);
+
