@@ -1,13 +1,5 @@
-import { Request, Response } from 'express';
-import { Pool } from 'pg';
-import * as bcrypt from 'bcryptjs';
-const pool = new Pool({
-  user: 'your_username',
-  host: 'localhost',
-  database: 'your_database',
-  password: 'your_password',
-  port: 5432,
-});
+const express = require('express')
+
 export const register = async (req: Request, res: Response) => {
   const { email, password } = req.body;
   try {
@@ -38,7 +30,7 @@ export const login = async (req: Request, res: Response) => {
     if (!user || !(await bcrypt.compare(password, user.password))) {
       return res.status(400).json({ message: 'Invalid email or password' });
     }
-    // TODO: Implement JWT or session-based authentication to keep the user logged in
+    TODO: Implement JWT or session-based authentication to keep the user logged in
     res.status(200).json({ message: 'Login successful' });
   } catch (err) {
     res.status(500).json({ message: 'Internal server error' });
