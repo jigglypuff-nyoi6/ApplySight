@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   entry: './src/index.tsx',
@@ -19,7 +20,9 @@ module.exports = {
     path: __dirname + '/dist',
   },
   devServer: {
-    contentBase: './dist',
+    static: {
+      directory: path.join(__dirname, 'path-to-your-content'),
+  }
   },
   plugins: [
     new HtmlWebpackPlugin({

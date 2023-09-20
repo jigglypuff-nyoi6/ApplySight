@@ -2,14 +2,10 @@ import { User, JobApplication } from './module';
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
-    username VARCHAR(255) UNIQUE NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
-    password VARCHAR(255) NOT NULL,
-    firstName VARCHAR(255),
-    lastName VARCHAR(255),
-    createdAt TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-    updatedAt TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    password VARCHAR(255) NOT NULL
 );
+
 CREATE TABLE job_applications (
     id SERIAL PRIMARY KEY,
     company VARCHAR(255) NOT NULL,

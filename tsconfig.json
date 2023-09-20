@@ -7,5 +7,5 @@
     "target": "es6",
     "jsx": "react"
   },
-  "include": ["./src/**/*", "./client/**/*", "./server/**/*"]
+  "include": ["./src/**/*", "./client/**/*", "./server/**/*", "controllers"]
 }
